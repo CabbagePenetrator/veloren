@@ -687,8 +687,7 @@ impl<'a> AgentData<'a> {
             Some(Body::ItemDrop(item)) => {
                 //If the agent is humanoid, it will pick up all kinds of item drops. If the
                 // agent isn't humanoid, it will pick up only consumable item drops.
-                let wants_pickup = matches!(self.body, Some(Body::Humanoid(_)))
-                    || matches!(item, item_drop::Body::Consumable);
+                let wants_pickup = false;
 
                 // The agent will attempt to pickup the item if it wants to pick it up and
                 // is allowed to
